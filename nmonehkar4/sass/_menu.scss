@@ -1,0 +1,115 @@
+.menu {
+  &-fixed {
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 28rem;
+    text-align: center;
+    color: var(--color-white);
+    font-weight: bold;
+    // right: 4%;
+    z-index: 100;
+    transition: all 0.3s;
+    @media only screen and(max-width:$breakpoint-lg) {
+      right: 0%;
+      height: 2vh;
+      opacity: 0;
+      width: 2rem;
+    }
+  }
+  &__img {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:active,
+    &:hover,
+    &:visited {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: var(--color-white);
+      text-decoration: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  }
+
+  &__item {
+    // padding: 2rem 0;
+    border-bottom: 1px solid var(--color-white);
+    border-top: 1px solid var(--color-white);
+    transition: all 0.2s;
+    font-size: 1.6rem;
+    &:last-child {
+      border-bottom: 2px solid var(--color-white);
+    }
+    &:first-child {
+      border-top: 2px solid var(--color-white);
+    }
+    &-active {
+      background-color: #fff;
+      color: var(--color-primary);
+      .menu__link {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+  }
+  &__network {
+    border-bottom: 1px solid rgba(247, 245, 245, 0.178);
+    .fa {
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.329);
+      padding: 0.5rem;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.icon-close {
+  width: 100%;
+  background-color: #fff;
+  color: var(--color-primary);
+  .fa {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}
+.icon-bar {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  width: 6rem;
+  top: 0%;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  .fa-bars {
+    padding: 2rem;
+    font-size: 3rem;
+    color: var(--color-primary);
+  }
+}
+
+.menu-fixed.active {
+  height: 100vh;
+  z-index: 1111;
+  opacity: 1;
+  width: 28rem;
+}

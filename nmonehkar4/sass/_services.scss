@@ -1,0 +1,19 @@
+.services{
+    border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+    
+    &__service{
+        background-color: rgba(250, 250, 250, 0.1);
+        transition: all 0.5s;
+        &:hover{
+        & p,
+       & h1{
+           color: black;
+
+        }
+            background-color: #fff;
+        }
+    }
+
+
+}
+

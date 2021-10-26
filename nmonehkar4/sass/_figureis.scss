@@ -1,0 +1,68 @@
+.figureis {
+  .figure {
+    position: relative;
+
+    &:hover figcaption {
+      transform: rotatex(0);
+      opacity: 1;
+    }
+
+    &.hide{
+     display: none;
+    }
+     &.show{
+       animation: animate .4s;
+     }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      height: 100%;
+    }
+    figcaption {
+      perspective: 50em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0.836);
+      top: 10%;
+      height: 80%;
+      right: 10%;
+      left: 10%;
+      transition: all 0.4s ease-in-out;
+      -webkit-transform: rotateX(-90deg);
+      transform: rotateX(-90deg);
+      -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      opacity: 0;
+
+      .fa {
+        margin: 1rem;
+        font-size: 3rem;
+        color: white;
+        padding: 1rem;
+        border-radius: 4px;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.work {
+  border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+  padding: 3rem 0 10rem 0;
+}
+
+@keyframes animate{
+  0%{
+    transform: scale(.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

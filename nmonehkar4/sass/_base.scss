@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #a43f49;
+  --color-white: #fff;
+}
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+* {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-tap-highlight-color:rgba(0,0,0,0) ;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width:$breakpoint-xl) {
+       font-size: 50%;
+       
+    }
+}
+body{
+    background: url(../images/page-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    direction: rtl;
+    width: 100%;
+}
